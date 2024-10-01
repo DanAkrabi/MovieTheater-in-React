@@ -1,0 +1,186 @@
+.details-box {
+  position: fixed;
+  top: 100px; /* Adjusted for illustration */
+  left: 50%; /* Center the box horizontally */
+  transform: translateX(-50%); /* Center the box horizontally */
+  height: 450px;
+  width: 450px;
+  background-color: rgb(65, 65, 65);
+  border-radius: 20px;
+  border: 3px solid #000000; /* White border, change color as needed */
+  /* box-shadow: 0 4px 6px rgba(3, 10, 5, 0.1); Optional: adds shadow for 3D effect */
+  z-index: 1050; /* Make sure it's above other content */
+}
+
+.btn-add-to-list:hover {
+  opacity: 0.7586;
+}
+.btn-back:hover {
+  opacity: 0.7;
+}
+.grid-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: 222px 222px; /* was 3fr 2fr, need to check whats better*/
+  /* grid-template-rows: 1fr 3fr 40px 40px 2fr; */
+  grid-template-rows: 45px 205px 20px 20px auto;
+  grid-template-areas:
+    "title title"
+    "img movie-data"
+    "img star-rating"
+    "img rating-msg"
+    "description description";
+}
+.img {
+  grid-area: img;
+  width: 185px; /* הגדר את רוחב התמונה להתאים לתא */
+  height: 250px; /* הגדר את גובה התמונה להתאים לתא */
+  border-radius: 10px;
+  position: relative;
+
+  top: 18px;
+  left: 12px;
+}
+.img:hover {
+  transform: scale(1.04);
+}
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  font-size: 20px;
+  text-align: center;
+}
+.title:hover {
+  transform: scale(1.08);
+}
+.details-overview {
+  grid-area: movie-data;
+  position: relative;
+  top: 17px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  padding-right: 49px;
+  gap: 2.29rem;
+}
+
+.details-overview p {
+  /* font-size: calc(10px + 0.5vw); */
+  font-size: 16px;
+  grid-area: movie-data;
+  /* font-size: 16px; */
+  min-height: 20px;
+}
+
+.movie-desc p {
+  grid-area: description;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.movie-desc {
+  grid-area: description; /* מגדיר את כל הקונטיינר להשתמש באזור ה'זה' */
+  position: relative;
+  top: 47px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.rating {
+  grid-area: star-rating;
+  position: relative;
+  padding-right: 20px;
+  top: 18px;
+}
+.rating:hover {
+  transform: scale(1.03);
+}
+.rating-msg {
+  position: relative;
+  top: 21px;
+  right: 21px;
+  grid-area: rating-msg;
+  z-index: 1000;
+}
+.rating-msg p {
+  font-size: 2vw;
+  /* font-size: 10px; */
+}
+
+/* .movie-desc p,
+.details-overview p {
+  font-size: calc(3px + 0.6vw);
+} */
+
+.loader {
+  position: relative /* was absolute*/;
+  top: 40%; /* ממרכז את ה-loader במרכז האנכי של details-box */
+  left: 41%; /* ממרכז את ה-loader במרכז האופקי של details-box */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-back {
+  position: absolute;
+  top: 0.6rem;
+  left: 28.3rem; /*was 25.5 after 28.3*/
+  height: 1.9rem;
+  aspect-ratio: 1;
+  border-radius: 90%;
+  border: none;
+  /* background-color: var(--color-text); */
+  background-color: #fff;
+  color: var(--color-background-500);
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); */
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.75s;
+  box-shadow: 2px 3px 20px black;
+}
+.btn-add-to-list {
+  position: absolute;
+  top: 3.3rem;
+  left: 28.4rem; /*was 25.6 after 28.4*/
+  height: 1.9rem;
+  aspect-ratio: 1;
+  border-radius: 90%;
+  border: none;
+  /* background-color: var(--color-text); */
+  background-color: #fff;
+  color: var(--color-background-500);
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); */
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.75s;
+  box-shadow: 2px 3px 20px black;
+}

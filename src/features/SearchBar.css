@@ -1,0 +1,19 @@
+.search-container {
+  display: flex;
+  flex-direction: column; /* מארגן את האלמנטים בצורה טורית */
+  align-items: center; /* ממרכז את האלמנטים בציר האופקי */
+  margin: 20px 0; /* מוסיף מרווח לפני ואחרי הקונטיינר */
+}
+
+.search {
+  border: solid 1px rgb(53, 52, 52, 0.7);
+  margin-bottom: 10px; /* מוסיף מרווח בין הקלט לכפתור */
+  border-radius: 7px;
+  width: 1000px;
+  text-align: center;
+  height: 43px;
+  background-color: rgb(117, 117, 117);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* border-color: transparent; */
+  box-shadow: 0px 3px 18px black;
+}

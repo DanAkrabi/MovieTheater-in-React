@@ -1,0 +1,8 @@
+.movies-container {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 35px;
+  padding: 20px;
+  grid-auto-rows: 350px; /* גובה קבוע לכל השורות */
+}

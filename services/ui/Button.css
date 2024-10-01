@@ -1,0 +1,27 @@
+/* .btn-main-page {
+  align-items: center;
+  align-self: center;
+} */
+/* .btn-start {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 180px;
+  align-items: center;
+} */
+.btn-start {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 180px;
+  align-items: center;
+  justify-content: center; /* This will center the content horizontally */
+  height: 35px;
+  border-radius: 20px;
+  background-color: rgb(99, 99, 99);
+  cursor: pointer;
+}
+
+.btn-start:hover {
+  opacity: 60%;
+}

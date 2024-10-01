@@ -1,0 +1,54 @@
+.content-box {
+  background-color: rgba(
+    88,
+    88,
+    88,
+    0.95
+  ); /*0.7 for 70% background transparesy*/
+  /* display: flex;
+  flex-wrap: wrap; */
+  margin: 0 auto;
+  max-width: 83%; /*was 1100px*/
+  border-radius: 8.2px;
+  min-height: 800px;
+  position: relative;
+  box-shadow: 2px 3px 35px rgb(29, 28, 28);
+  border: solid 3px rgb(53, 52, 52);
+  position: relative;
+}
+
+.content-box p {
+  font-size: 50px;
+  text-align: center;
+  align-self: center;
+  width: 100%; /* Ensures the <p> element takes full width of the container */
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%; /* Correct this to horizontally center the loader */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contentbox-msg {
+  position: absolute;
+  top: 19%;
+}

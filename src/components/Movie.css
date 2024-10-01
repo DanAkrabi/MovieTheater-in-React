@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.movie-item:hover {
+  transform: scale(1.05); /* מגדיל את הפריט בעת עכבר מעל */
+}
+
+/* .movie-item {
+  display: grid;
+  overflow: visible;
+  grid-template-rows: 45px 220px 20px;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "title "
+    "img"
+    "year";
+  grid-gap: 20px;
+  border-radius: 10px; אם תרצה להוסיף עיגול לגבולות
+  margin-top: 20px;
+  box-shadow: 0 4px 19px rgba(0, 0, 0, 0.8);
+  transition: transform 0.2s; נותן אפקט חלק בעת שינויים
+  cursor: pointer;
+  position: relative;
+} */
+.movie-item {
+  display: grid;
+  grid-template-rows: 0.3fr 2fr 0.4fr; /* גובה הפריטים יותאם לתוכן */
+  grid-template-columns: 1fr;
+  border-radius: 10px;
+  grid-template-areas:
+    "title "
+    "img"
+    "year";
+  overflow: hidden;
+
+  box-shadow: 0 4px 19px rgba(0, 0, 0, 0.8);
+  transition: transform 0.2s;
+  cursor: pointer;
+  justify-content: center;
+  background-color: rgba(40, 39, 41, 0.77);
+  position: relative;
+  overflow: visible;
+}
+.movie-item:hover {
+  box-shadow: 10px 10px 30px rgba(255, 255, 255, 0.1); /* נותן אפקט צל קל */
+}
+
+.movie-title {
+  margin-bottom: 9px;
+  margin-top: 11px;
+  display: flex;
+  border: 1px solid rgb(138, 133, 133);
+  border-right: transparent;
+  border-left: transparent;
+  transition: background-color 0.75s;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+  font-size: calc(6px + 0.5vw);
+  padding: 4px;
+}
+.movie-year {
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  width: 100%;
+  grid-area: year;
+  position: absolute;
+  right: 0%;
+  top: 18%;
+  font-size: 16px; /* Adjust this value to the desired size */
+  border: 1px solid rgb(138, 133, 133);
+  border-right: transparent;
+  border-left: transparent;
+  transition: background-color 0.75s;
+}
+.movie-item:hover .movie-title {
+  background-color: rgb(153, 149, 149);
+}
+.movie-item:hover .movie-year {
+  background-color: rgb(153, 149, 149);
+}
+
+/* .movie-img {
+  grid-area: img;
+  object-fit: contain;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+} */
+.movie-img {
+  grid-area: img;
+  position: absolute;
+  top: 10px;
+
+  object-fit: contain;
+  width: 100%;
+  height: 95%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.movie-rating {
+  position: absolute;
+  top: -10%; /*-33.9px*/
+  left: 50%; /*94px*/
+  transform: scale(0.58); /* מקטין את האימוג'י והטקסט סביבו */
+  display: flex;
+  align-items: center; /* ממרכז את הטקסט והאימוג'י ורטיקלית */
+  justify-content: center; /* ממרכז את הטקסט והאימוג'י אופקית */
+}
+.movie-rating-number {
+  position: absolute;
+  transform: scale(0.5);
+  left: 43%; /*81px*/
+  top: 12.5%; /*8.3px*/
+  display: flex;
+  align-items: center; /* ממרכז את הטקסט והאימוג'י ורטיקלית */
+  justify-content: center;
+}
+
+.movie-rating-number10 {
+  position: absolute;
+  transform: scale(0.5);
+  left: 36.8%; /*68.35px*/
+  top: 13%; /*8.3px*/
+  display: flex;
+  align-items: center; /* ממרכז את הטקסט והאימוג'י ורטיקלית */
+  justify-content: center;
+}
