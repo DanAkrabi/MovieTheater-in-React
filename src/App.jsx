@@ -119,6 +119,7 @@ function App() {
                 {/* <Route path="/" element={<Homepage />} /> */}
                 <Route
                   path="/"
+                  index
                   element={
                     <AppLayout
                       className="app-layout"
