@@ -8,13 +8,16 @@
   /* display: flex;
   flex-wrap: wrap; */
   margin: 0 auto;
-  max-width: 83%; /*was 1100px*/
+  max-width: 81vw; /*was 1100px / 83%*/
   border-radius: 8.2px;
   min-height: 800px;
   position: relative;
   box-shadow: 2px 3px 35px rgb(29, 28, 28);
   border: solid 3px rgb(53, 52, 52);
   position: relative;
+  width: 100%;
+  /* grid-area: content-container; */
+  grid-area: 3/1/4/4;
 }
 
 .content-box p {

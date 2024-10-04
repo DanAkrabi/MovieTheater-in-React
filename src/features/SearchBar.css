@@ -1,8 +1,12 @@
 .search-container {
   display: flex;
-  flex-direction: column; /* מארגן את האלמנטים בצורה טורית */
-  align-items: center; /* ממרכז את האלמנטים בציר האופקי */
-  margin: 20px 0; /* מוסיף מרווח לפני ואחרי הקונטיינר */
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  /* grid-area: search-bar; */
+  grid-area: 2/1/3/3;
+  background-color: aqua;
 }
 
 .search {

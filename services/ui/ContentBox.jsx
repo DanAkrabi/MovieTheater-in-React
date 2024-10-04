@@ -14,6 +14,7 @@ import LikedMoviesContext from "../context/LikedMoviesContext.jsx";
 import LikedMovieList from "../../src/components/LikedMovieList.jsx";
 const notFoundMsg = <p className="contentbox-msg">❌Movie not found❌</p>;
 
+//could've done it without contentbox - need to check.
 export default function ContentBox({ isLoading, showLikedMovies }) {
   const { query } = useContext(QueryContext);
   const { movies, foundMovie, selectedId } = useContext(MoviesContext);

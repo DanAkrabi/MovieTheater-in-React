@@ -23,14 +23,14 @@ function AppLayout({ isLoading, showLikedMovies, setShowLikedMovies }) {
 
   return (
     <div className="app-layout">
-      <Header className="main-container">
+      <Header className="title">
         {showLikedMovies ? "• Your Movies •" : "Movie Theater"}
       </Header>
 
       {isActive && (
         <>
           <nav
-            className="btn-liked-movies"
+            className="btn btn-liked-movies"
             title={
               showLikedMovies ? "hide your movies list" : "show your movie list"
             }
@@ -51,14 +51,8 @@ function AppLayout({ isLoading, showLikedMovies, setShowLikedMovies }) {
             </div>
           </nav>
           {showLikedMovies && likedMovies.length > 0 && (
-            // <button
-            //   className="btn-delete-movies"
-            //   onClick={() => onDeleteAllMovies()}
-            // >
-            //   DeleteMovies
-            // </button>
             <button
-              className="icon"
+              className="btn btn-delete-liked-movies-icon"
               onClick={() => onDeleteAllMovies()}
               title="delete your movie list"
             >
@@ -71,10 +65,15 @@ function AppLayout({ isLoading, showLikedMovies, setShowLikedMovies }) {
             </button>
           )}
           <SearchBar
+            className="search-bar"
             showLikedMovies={showLikedMovies}
             setShowLikedMovies={setShowLikedMovies}
           />
-          <ContentBox isLoading={isLoading} showLikedMovies={showLikedMovies} />
+          <ContentBox
+            className="container-box"
+            isLoading={isLoading}
+            showLikedMovies={showLikedMovies}
+          />
           {/*transfering isLoading as a prop for optimization*/}
         </>
       )}

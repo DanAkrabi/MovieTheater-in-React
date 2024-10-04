@@ -1,6 +1,6 @@
 import AppLayout from "./pages/AppLayout.jsx";
 import PageNotFound from "../services/ui/PageNotFound.jsx";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import useMovies from "../services/custom-hooks/useMovies.jsx";
 import React from "react";
@@ -114,12 +114,11 @@ function App() {
               setFoundMovie,
             }}
           >
-            <BrowserRouter basename="/MovieTheater-in-React">
+            <HashRouter basename="/">
               <Routes>
                 {/* <Route path="/" element={<Homepage />} /> */}
                 <Route
                   path="/"
-                  index
                   element={
                     <AppLayout
                       className="app-layout"
@@ -129,12 +128,12 @@ function App() {
                     />
                   }
                 >
-                  <Route path="movies" element={<MovieList />} />
+                  <Route path="movies" index element={<MovieList />} />
                 </Route>
                 <Route path="*" element={<PageNotFound />} />
                 <Route />
               </Routes>
-            </BrowserRouter>
+            </HashRouter>
           </MoviesContext.Provider>
         </QueryContext.Provider>
       </LikedMoviesContext.Provider>

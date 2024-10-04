@@ -6,4 +6,9 @@
 .headline {
   margin-top: 50px;
   text-align: center;
+  /* grid-area: header; */
+  z-index: 999;
+  background-color: rgb(221, 22, 211);
+  place-content: center;
+  grid-area: 1/1/2/3;
 }

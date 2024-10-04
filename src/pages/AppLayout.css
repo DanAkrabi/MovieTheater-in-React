@@ -4,29 +4,53 @@
   margin-top: 50px;
 }
 .btn-delete-movies {
-  position: absolute;
+  /* position: absolute; */
   z-index: 999;
-  top: 50%;
-  left: 91%;
+  /* top: 50%; */
+  /* left: 91%; */
+  grid-area: buttons;
+}
+/* .app-layout {
+  position: relative;
+  display: grid;
+  grid-template-rows: 150px 150px 1fr;
+  grid-template-columns: 1fr 0.1fr 150px;
+  grid-template-areas:
+    "header header header header"
+    "search-bar search-bar search-bar search-bar"
+    "content-container content-container content-container buttons";
+} */
+/* .app-layout {
+  position: relative;
+  display: grid;
+  grid-template-rows: 120px 120px 1fr;
+  grid-template-columns: 1fr 130px;
+  grid-template-areas:
+    "header header header"
+    "search-bar search-bar search-bar"
+    "content-container content-container buttons-area";
+} */
+.app-layout {
+  position: relative;
+  display: grid;
+  grid-template-rows: 120px 120px 1fr;
+  grid-template-columns: 1fr 100px;
+  grid-template-areas:
+    "header header"
+    "search-bar search-bar"
+    "content-container buttons-area";
 }
 
-/* .btn-liked-movies {
-  position: absolute;
-  z-index: 999;
-  top: 28%;
-  left: 91%;
-} */
-/*css code from here belongs to the hamburger button*/
+/* Adjusting the CSS for the hamburger button to fit into the grid properly */
 .btn-liked-movies {
-  position: absolute;
-  z-index: 999;
-  top: 16.9%;
-  left: 93%;
+  z-index: 1005;
   padding: 0.4rem;
-  display: flex;
   cursor: pointer;
   border-radius: 10px;
+  grid-area: buttons-area;
+  z-index: 1005;
 }
+/*css code from here belongs to the hamburger button*/
 
 .btn-liked-movies:hover {
   box-shadow: 0 0 10px rgba(10, 10, 10, 0.5);
@@ -76,106 +100,98 @@
   transition: background-color 0.2;
 }
 /*css code from here belongs to the delete all movies button*/
-.icon {
+.btn-delete-liked-movies-icon {
   background: transparent;
   position: absolute;
-  width: 60px; /* מעט יותר גדול מ-50px */
-  height: 60px; /* מעט יותר גדול מ-50px */
-  border-radius: 4.5px; /* מעט יותר גדול מ-3.75px */
+  width: 60px;
+  height: 60px;
+  border-radius: 4.5px;
   transition: box-shadow 0.2s ease;
-  top: 26.3%;
-
-  left: 93.3%;
+  /* top: 26.3%; */
+  grid-area: buttons-area;
+  top: 90.5px;
+  left: 17px;
+  /* left: 93.3%; */
   border: transparent;
   cursor: pointer;
 }
 
-.icon:hover {
+.btn-delete-liked-movies-icon:hover {
   box-shadow: 0 0 10px rgba(10, 10, 10, 0.5);
   transition: box-shadow 0.7s, background-color 0.7s;
 }
 
 .lid {
   position: absolute;
-  bottom: 36px; /* מעט יותר גדול מ-30px */
-  left: 9px; /* מעט יותר גדול מ-7.5px */
-  width: 42px; /* מעט יותר גדול מ-35px */
-  height: 8px; /* מעט יותר גדול מ-5px */
+  bottom: 36px;
+  left: 9px;
+  width: 42px;
+  height: 8px;
 }
 
 .lidcap {
   position: absolute;
-  bottom: 40.5px; /* מעט יותר גדול מ-34px */
-  left: 26px; /* מעט יותר גדול מ-22px */
-  height: 3px; /* נשאר אותו דבר */
-  width: 6px; /* מעט יותר גדול מ-5px */
+  bottom: 40.5px;
+  left: 26px;
+  height: 3px;
+  width: 6px;
 }
 
 .lid,
 .lidcap {
-  border-top-left-radius: 10px; /* מעט יותר גדול מ-8.4px */
-  border-top-right-radius: 10px; /* מעט יותר גדול מ-8.4px */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background: #111;
   transition: transform 0.2s linear, margin 0.2s linear;
 }
 
-.icon:hover .lid,
-.icon:hover .lidcap {
+.btn-delete-liked-movies-icon:hover .lid,
+.btn-delete-liked-movies-icon:hover .lidcap {
   transform: rotateX(14deg);
-  margin-bottom: 7px; /* מעט פחות מ-7.75px */
+  margin-bottom: 7px;
 }
 
 .bin {
   position: absolute;
   bottom: 0;
-  left: 15px; /* מעט יותר גדול מ-12.5px */
-  width: 30px; /* מעט יותר גדול מ-25px */
-  border-top: 36px solid #111; /* מעט יותר גדול מ-30px */
-  border-left: 3px solid transparent; /* מעט יותר גדול מ-2.5px */
-  border-right: 3px solid transparent; /* מעט יותר גדול מ-2.5px */
+  left: 15px;
+  width: 30px;
+  border-top: 36px solid #111;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
 }
 
 .c {
   position: absolute;
   border-radius: 0px;
-  width: 2.5px; /* נשאר אותו דבר */
-  height: 25px; /* מעט פחות מ-27.5px */
+  width: 2.5px;
+  height: 25px;
   background-color: #fff;
-  bottom: 6px; /* מעט יותר גדול מ-5px */
+  bottom: 6px;
 }
 
 .c.cut1 {
-  left: 18px; /* מעט יותר גדול מ-16px */
+  left: 18px;
   transform: rotate(5deg);
 }
 .c.cut2 {
-  right: 18px; /* מעט יותר גדול מ-16px */
+  right: 18px;
   transform: rotate(-5deg);
 }
 
-/* שינוי צבע כאשר המשתמש מרחף מעל הכפתור */
-.icon:hover .lid,
-.icon:hover .lidcap {
+.btn-delete-liked-movies-icon:hover .lid,
+.btn-delete-liked-movies-icon:hover .lidcap {
   background-color: red;
   transition: background-color 0.7s;
 }
-.icon:hover .bin {
+.btn-delete-liked-movies-icon:hover .bin {
   border-top-color: red;
   transition: border-top-color 0.7s;
 }
 
-.app-layout {
-  position: relative;
-}
-
-.app-layout .btn-liked-movies {
+.btn-liked-movies {
   position: absolute;
-  top: 131px;
-  left: 1260px;
-}
-
-.app-layout .icon {
-  position: absolute;
-  top: 205px;
-  left: 1260px;
+  top: 13px;
+  left: 12px;
+  /* left: 1260px; */
 }
