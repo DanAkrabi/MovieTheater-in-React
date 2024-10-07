@@ -1,0 +1,19 @@
+[33ma268755[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/gh-pages[m[33m)[m HEAD@{0}: reset: moving to origin/gh-pages
+[33m995020c[m HEAD@{1}: reset: moving to HEAD~1
+[33m0088472[m HEAD@{2}: commit: Resolved merge conflicts in all affected files
+[33m995020c[m HEAD@{3}: commit: attempting to fix moving background
+[33m6ff217e[m HEAD@{4}: commit: changed the website design
+[33m2982a33[m HEAD@{5}: commit: added a background theme
+[33m8a801f7[m HEAD@{6}: commit: fixed and improved the introduction page and added a lil adjustment for the buttons
+[33m8a84455[m HEAD@{7}: commit: removing grid colors for debuging
+[33mb5afe51[m HEAD@{8}: commit: attempting to fix buttons positioning on different screen sizes
+[33md1f162a[m HEAD@{9}: commit: Fix grid layout
+[33m43500b3[m HEAD@{10}: commit: attempting to fix 404 code msg on git pages after refreshing by changing to HashRouter
+[33m805f6fe[m HEAD@{11}: commit: trying to add an indexed route to try and fix a 404 code after refresh
+[33m9325ad5[m HEAD@{12}: commit: trying to add an indexed route to try and fix a 404 code after refresh
+[33m5e0f53d[m HEAD@{13}: Branch: renamed refs/heads/master to refs/heads/master
+[33m5e0f53d[m HEAD@{15}: commit: trying to add an indexed route to try and fix a 404 code after refresh
+[33mbce24b9[m HEAD@{16}: commit: adding dist
+[33m3e7b402[m HEAD@{17}: commit: first commit
+[33m143f2e3[m HEAD@{18}: Branch: renamed refs/heads/master to refs/heads/master
+[33m143f2e3[m HEAD@{20}: commit (initial): first commit
